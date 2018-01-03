@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 
 import com.tencent.smtt.export.external.interfaces.IX5WebChromeClient;
 import com.tencent.smtt.export.external.interfaces.JsResult;
@@ -13,11 +12,11 @@ import com.tencent.smtt.sdk.ValueCallback;
 import com.tencent.smtt.sdk.WebChromeClient;
 import com.tencent.smtt.sdk.WebView;
 
-public class MWebChromeClient extends WebChromeClient {
+public class X5WebChromeClient extends WebChromeClient {
 
     protected Activity mCtx;
 
-    public MWebChromeClient(Activity a) {
+    public X5WebChromeClient(Activity a) {
         mCtx = a;
     }
 
@@ -76,32 +75,32 @@ public class MWebChromeClient extends WebChromeClient {
 //    public void openFileChooser(ValueCallback<Uri> uploadMsg, String acceptType) {
 //        Log.i("test", "openFileChooser 1");
 ////        webView.getContext().uploadFile = uploadFile;
-//        MX5WebViewUtils.openFileChooseProcess(mCtx);
+//        X5Utils.openFileChooseProcess(mCtx);
 //    }
 //
 //    // For Android < 3.0
 //    public void openFileChooser(ValueCallback<Uri> uploadMsgs) {
 //        Log.i("test", "openFileChooser 2");
 ////        FilechooserActivity.this.uploadFile = uploadFile;
-//        MX5WebViewUtils.openFileChooseProcess(mCtx);
+//        X5Utils.openFileChooseProcess(mCtx);
 //    }
 //
 //    // For Android  > 4.1.1
 //    public void openFileChooser(ValueCallback<Uri> uploadMsg, String acceptType, String capture) {
 //        Log.i("test", "openFileChooser 3");
 ////        FilechooserActivity.this.uploadFile = uploadFile;
-//        MX5WebViewUtils.openFileChooseProcess(mCtx);
+//        X5Utils.openFileChooseProcess(mCtx);
 //    }
 
     // For Android  >= 5.0
     public boolean onShowFileChooser(com.tencent.smtt.sdk.WebView webView,
                                      ValueCallback<Uri[]> filePathCallback,
                                      WebChromeClient.FileChooserParams fileChooserParams) {
-        Log.i("MWebChromeClient", "openFileChooser 4:");
+        Log.i("X5WebChromeClient", "openFileChooser 4:");
 
         if (fileChoooseListener != null)
             fileChoooseListener.listener(filePathCallback);
-        MX5WebViewUtils.openFileChooseProcess(mCtx);
+        X5Utils.openFileChooseProcess(mCtx);
         return true;
     }
 

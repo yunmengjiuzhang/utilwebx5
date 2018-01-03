@@ -7,13 +7,9 @@
         android:id="@+id/frame_web_video"></FrameLayout>
     
 
-    <wangfei.utilwebx5.MX5WebView
+    <wangfei.utilwebx5.X5WebView
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:id="@+id/activity_filechooser">
-        
-        
-    </wangfei.utilwebx5.MX5WebView>
-    
+        android:id="@+id/activity_filechooser"/>
 
 </RelativeLayout>

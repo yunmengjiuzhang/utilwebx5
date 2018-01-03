@@ -2,8 +2,7 @@ package com.github.wangfeixixi.util;
 
 import android.app.Application;
 
-import wangfei.utilwebx5.CrashHandler;
-import wangfei.utilwebx5.MX5WebViewUtils;
+import wangfei.utilwebx5.X5Utils;
 
 public class APPAplication extends Application {
 
@@ -11,7 +10,7 @@ public class APPAplication extends Application {
     public void onCreate() {
         super.onCreate();
         CrashHandler.getInstance().init(this, "aaaaaaaaaaaaaaaaaaaaaa");
-        MX5WebViewUtils.init(this);
+        X5Utils.init(this);
     }
 
 }

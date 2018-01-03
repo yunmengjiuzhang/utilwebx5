@@ -1,4 +1,4 @@
-package wangfei.utilwebx5;
+package com.github.wangfeixixi.util;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

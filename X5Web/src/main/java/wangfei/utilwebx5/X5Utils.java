@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.tencent.smtt.sdk.QbSdk;
 
-public class MX5WebViewUtils {
+public class X5Utils {
 
     /**
      * @param context 全局application
@@ -38,7 +38,7 @@ public class MX5WebViewUtils {
 
     // /////////////////////////////////////////
     // 向webview发出信息
-    public static void enableX5FullscreenFunc(MX5WebView webView) {
+    public static void enableX5FullscreenFunc(X5WebView webView) {
 
         if (webView.getX5WebViewExtension() != null) {
             Toast.makeText(webView.getContext(), "开启X5全屏播放模式", Toast.LENGTH_LONG).show();
@@ -55,7 +55,7 @@ public class MX5WebViewUtils {
         }
     }
 
-    public static void disableX5FullscreenFunc(MX5WebView webView) {
+    public static void disableX5FullscreenFunc(X5WebView webView) {
         if (webView.getX5WebViewExtension() != null) {
             Toast.makeText(webView.getContext(), "恢复webkit初始状态", Toast.LENGTH_LONG).show();
             Bundle data = new Bundle();
@@ -71,7 +71,7 @@ public class MX5WebViewUtils {
         }
     }
 
-    public static void enableLiteWndFunc(MX5WebView webView) {
+    public static void enableLiteWndFunc(X5WebView webView) {
         if (webView.getX5WebViewExtension() != null) {
             Toast.makeText(webView.getContext(), "开启小窗模式", Toast.LENGTH_LONG).show();
             Bundle data = new Bundle();
@@ -87,7 +87,7 @@ public class MX5WebViewUtils {
         }
     }
 
-    public static void enablePageVideoFunc(MX5WebView webView) {
+    public static void enablePageVideoFunc(X5WebView webView) {
         if (webView.getX5WebViewExtension() != null) {
             Toast.makeText(webView.getContext(), "页面内全屏播放模式", Toast.LENGTH_LONG).show();
             Bundle data = new Bundle();

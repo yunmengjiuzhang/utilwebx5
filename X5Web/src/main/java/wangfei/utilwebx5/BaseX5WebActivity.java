@@ -9,10 +9,6 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.webkit.JavascriptInterface;
 
-import wangfei.utilwebx5.MWebChromeClient;
-import wangfei.utilwebx5.MWebViewJS;
-import wangfei.utilwebx5.MX5WebView;
-import wangfei.utilwebx5.MX5WebViewUtils;
 import com.tencent.smtt.sdk.DownloadListener;
 import com.tencent.smtt.sdk.ValueCallback;
 import com.tencent.smtt.utils.TbsLog;
@@ -21,7 +17,7 @@ public abstract class BaseX5WebActivity extends Activity {
 
     protected ValueCallback<Uri> uploadFile;
     protected ValueCallback<Uri[]> uploadFiles;
-    protected MX5WebView mWebView;
+    protected X5WebView mWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,14 +50,14 @@ public abstract class BaseX5WebActivity extends Activity {
 
     protected abstract void initView();
 
-    protected abstract MX5WebView getmX5WebView();
+    protected abstract X5WebView getmX5WebView();
 
     protected abstract void start();
 
     public void setWebChromeClient() {
-        MWebChromeClient mWebChromeClient = new MWebChromeClient(this);
+        X5WebChromeClient mWebChromeClient = new X5WebChromeClient(this);
 
-        mWebChromeClient.setFileChooseListener(new MWebChromeClient.FileChoooseListener() {
+        mWebChromeClient.setFileChooseListener(new X5WebChromeClient.FileChoooseListener() {
             @Override
             public void listener(ValueCallback<Uri[]> filePathCallback) {
                 uploadFiles = filePathCallback;
@@ -71,26 +67,26 @@ public abstract class BaseX5WebActivity extends Activity {
     }
 
     public void addJavascriptInterface() {
-        mWebView.addJavascriptInterface(new MWebViewJS(mWebView) {
+        mWebView.addJavascriptInterface(new X5JS(mWebView) {
 
             @JavascriptInterface
             public void onX5ButtonClicked() {
-                MX5WebViewUtils.enableX5FullscreenFunc(webView);
+                X5Utils.enableX5FullscreenFunc(webView);
             }
 
             @JavascriptInterface
             public void onCustomButtonClicked() {
-                MX5WebViewUtils.disableX5FullscreenFunc(webView);
+                X5Utils.disableX5FullscreenFunc(webView);
             }
 
             @JavascriptInterface
             public void onLiteWndButtonClicked() {
-                MX5WebViewUtils.enableLiteWndFunc(webView);
+                X5Utils.enableLiteWndFunc(webView);
             }
 
             @JavascriptInterface
             public void onPageVideoClicked() {
-                MX5WebViewUtils.enablePageVideoFunc(webView);
+                X5Utils.enablePageVideoFunc(webView);
             }
         }, "Android");
     }

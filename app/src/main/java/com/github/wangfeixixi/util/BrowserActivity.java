@@ -3,7 +3,7 @@ package com.github.wangfeixixi.util;
 import android.widget.FrameLayout;
 
 import wangfei.utilwebx5.BaseX5WebActivity;
-import wangfei.utilwebx5.MX5WebView;
+import wangfei.utilwebx5.X5WebView;
 
 public class BrowserActivity extends BaseX5WebActivity {
 
@@ -13,8 +13,8 @@ public class BrowserActivity extends BaseX5WebActivity {
     }
 
     @Override
-    protected MX5WebView getmX5WebView() {
-        mWebView = new MX5WebView(this);
+    protected X5WebView getmX5WebView() {
+        mWebView = new X5WebView(this);
         FrameLayout mViewParent = (FrameLayout) findViewById(R.id.framelayout);
         mViewParent.removeAllViews();
         mViewParent.addView(mWebView, new FrameLayout.LayoutParams(
