@@ -6,11 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import wangfei.utilwebx5.X5WebView;
-import wangfei.utilwebx5.X5WebViewClient;
+import wangfei.utilwebx5.X5WebViewSample;
 
 public class MainActivity extends AppCompatActivity {
-    private X5WebView mx5WebView;
+    private X5WebViewSample mx5WebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         initLienter();
 
-        mx5WebView = new X5WebView(this, null);
+        mx5WebView = new X5WebViewSample(this, null);
 
         FrameLayout viewById = findViewById(R.id.test_webview);
         viewById.addView(mx5WebView, new FrameLayout.LayoutParams(

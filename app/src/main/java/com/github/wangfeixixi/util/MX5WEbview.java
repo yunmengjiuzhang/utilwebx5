@@ -6,11 +6,11 @@ import android.util.AttributeSet;
 import wangfei.utilwebx5.X5DownLoadListener;
 import wangfei.utilwebx5.X5JS;
 import wangfei.utilwebx5.X5WebChromeClient;
-import wangfei.utilwebx5.X5WebView;
+import wangfei.utilwebx5.X5WebViewSample;
 import wangfei.utilwebx5.X5WebViewClient;
 
 
-public class MX5WEbview extends X5WebView {
+public class MX5WEbview extends X5WebViewSample {
     public MX5WEbview(Context arg0) {
         super(arg0);
     }

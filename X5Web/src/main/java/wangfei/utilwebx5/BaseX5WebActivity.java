@@ -8,8 +8,6 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 
 import com.tencent.smtt.sdk.ValueCallback;
-import com.tencent.smtt.sdk.WebChromeClient;
-import com.tencent.smtt.sdk.WebViewClient;
 
 import wangfei.swipeback.SwipeBackActivity;
 
@@ -17,7 +15,7 @@ public abstract class BaseX5WebActivity extends SwipeBackActivity {
 
     protected ValueCallback<Uri> uploadFile;
     protected ValueCallback<Uri[]> uploadFiles;
-    protected X5WebView mWebView;
+    protected X5WebViewSample mWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +28,7 @@ public abstract class BaseX5WebActivity extends SwipeBackActivity {
 
     protected abstract void initView();
 
-    protected abstract X5WebView getmX5WebView();
+    protected abstract X5WebViewSample getmX5WebView();
 
     protected abstract void start();
 
