@@ -26,6 +26,7 @@ public class BrowserActivity extends BaseX5WebActivity {
     @Override
     protected void start() {
 
-        mWebView.loadUrl("http://app.html5.qq.com/navi/index");
+//        mWebView.loadUrlByCookie("http://app.html5.qq.com/navi/index");
+        mWebView.loadUrlByCookie(this, "http://app.html5.qq.com/navi/index", null);
     }
 }

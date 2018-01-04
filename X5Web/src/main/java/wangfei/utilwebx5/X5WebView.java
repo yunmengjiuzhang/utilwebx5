@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
 
+import com.tencent.smtt.sdk.CookieManager;
+import com.tencent.smtt.sdk.CookieSyncManager;
 import com.tencent.smtt.sdk.WebSettings;
 import com.tencent.smtt.sdk.WebSettings.LayoutAlgorithm;
 import com.tencent.smtt.sdk.WebView;
@@ -21,6 +23,16 @@ public class X5WebView extends WebView {
     }
 
     public void initData() {
+    }
+
+    public void loadUrlByCookie(Context context, String url, String cookie) {
+        CookieSyncManager.createInstance(context);
+        CookieManager cookieManager = CookieManager.getInstance();
+        cookieManager.setAcceptCookie(true);
+        cookieManager.removeAllCookie();
+        cookieManager.setCookie(url, cookie);
+        CookieSyncManager.getInstance().sync();
+        super.loadUrl(url);
     }
 
     public void setX5ChromeClient(X5WebChromeClient a) {
@@ -62,7 +74,6 @@ public class X5WebView extends WebView {
 
         // this.getSettingsExtension().setPageCacheCapacity(IX5WebSettings.DEFAULT_CACHE_CAPACITY);//extension
         // settings 的设计
-
 
 
         // 设置可以访问文件
