@@ -20,7 +20,6 @@ public class BrowserActivity extends BaseX5WebActivity {
         mViewParent.addView(mWebView, new FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.FILL_PARENT,
                 FrameLayout.LayoutParams.FILL_PARENT));
-
         return mWebView;
     }
 

@@ -1,6 +1,5 @@
 package wangfei.utilwebx5;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.PixelFormat;
@@ -12,7 +11,9 @@ import com.tencent.smtt.sdk.ValueCallback;
 import com.tencent.smtt.sdk.WebChromeClient;
 import com.tencent.smtt.sdk.WebViewClient;
 
-public abstract class BaseX5WebActivity extends Activity {
+import wangfei.swipeback.SwipeBackActivity;
+
+public abstract class BaseX5WebActivity extends SwipeBackActivity {
 
     protected ValueCallback<Uri> uploadFile;
     protected ValueCallback<Uri[]> uploadFiles;
@@ -24,28 +25,7 @@ public abstract class BaseX5WebActivity extends Activity {
         getWindow().setFormat(PixelFormat.TRANSLUCENT);
         initView();
         mWebView = getmX5WebView();
-        initData();
-    }
-
-
-    private void initData() {
-        mWebView.setWebChromeClient(getmX5WebChromeClient());
-        mWebView.setWebViewClient(getmX5WebViewClient());
-        mWebView.addJavascriptInterface(getX5JS(), getX5JSName());
-        mWebView.setDownloadListener(getmX5DownLoadListener());
         start();
-    }
-
-    private String getX5JSName() {
-        return "Android";
-    }
-
-    private X5JS getX5JS() {
-        return new X5JS(mWebView);
-    }
-
-    public X5DownLoadListener getmX5DownLoadListener() {
-        return new X5DownLoadListener();
     }
 
     protected abstract void initView();
@@ -54,25 +34,8 @@ public abstract class BaseX5WebActivity extends Activity {
 
     protected abstract void start();
 
-    public WebViewClient getmX5WebViewClient() {
-        return new X5WebViewClient();
-    }
-
-    public WebChromeClient getmX5WebChromeClient() {
-        X5WebChromeClient mWebChromeClient = new X5WebChromeClient(this);
-
-        mWebChromeClient.setFileChooseListener(new X5WebChromeClient.FileChoooseListener() {
-            @Override
-            public void listener(ValueCallback<Uri[]> filePathCallback) {
-                uploadFiles = filePathCallback;
-            }
-        });
-        return mWebChromeClient;
-    }
-
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
-        // TODO Auto-generated method stub
         try {
             super.onConfigurationChanged(newConfig);
             if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
