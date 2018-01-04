@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         initLienter();
 
         mx5WebView = new X5WebView(this, null);
-        mx5WebView.setWebViewClient(new X5WebViewClient());
 
         FrameLayout viewById = findViewById(R.id.test_webview);
         viewById.addView(mx5WebView, new FrameLayout.LayoutParams(

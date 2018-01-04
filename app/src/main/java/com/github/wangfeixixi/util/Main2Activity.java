@@ -1,19 +1,24 @@
-package wangfei.utilwebx5;
+package com.github.wangfeixixi.util;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.PixelFormat;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 
 import com.tencent.smtt.sdk.ValueCallback;
 import com.tencent.smtt.sdk.WebChromeClient;
 import com.tencent.smtt.sdk.WebViewClient;
 
-public abstract class BaseX5WebActivity extends Activity {
+import wangfei.utilwebx5.X5DownLoadListener;
+import wangfei.utilwebx5.X5JS;
+import wangfei.utilwebx5.X5WebChromeClient;
+import wangfei.utilwebx5.X5WebView;
+import wangfei.utilwebx5.X5WebViewClient;
 
+public abstract class Main2Activity extends AppCompatActivity {
     protected ValueCallback<Uri> uploadFile;
     protected ValueCallback<Uri[]> uploadFiles;
     protected X5WebView mWebView;

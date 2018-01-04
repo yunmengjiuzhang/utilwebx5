@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/X5Web/X5WebDemo.iml" filepath="$PROJECT_DIR$/X5Web/X5WebDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/X5Web/X5Web.iml" filepath="$PROJECT_DIR$/X5Web/X5Web.iml" />
+      <module fileurl="file://C:\Users\xuany\Androidws\workspace\util\utilwebx5\X5Web\X5WebDemo.iml" filepath="C:\Users\xuany\Androidws\workspace\util\utilwebx5\X5Web\X5WebDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/utilwebx5.iml" filepath="$PROJECT_DIR$/utilwebx5.iml" />
     </modules>
