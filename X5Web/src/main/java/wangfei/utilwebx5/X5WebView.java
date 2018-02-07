@@ -53,6 +53,8 @@ public class X5WebView extends WebView {
 
     public void setX5Settings() {
         WebSettings webSetting = this.getSettings();
+        webSetting.setAllowFileAccessFromFileURLs(false);
+        webSetting.setAllowUniversalAccessFromFileURLs(false);
         webSetting.setJavaScriptEnabled(true);
         webSetting.setJavaScriptCanOpenWindowsAutomatically(true);
         webSetting.setAllowFileAccess(true);
