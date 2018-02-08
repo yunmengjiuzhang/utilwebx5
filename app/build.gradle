@@ -5,7 +5,7 @@ android {
     defaultConfig {
         applicationId "com.github.wangfeixixi.util"
         minSdkVersion 19
-        targetSdkVersion 26
+        targetSdkVersion 21
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -15,6 +15,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    dataBinding {
+        enabled true
     }
 }
 
@@ -26,5 +29,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile project(path: ':X5Web')
+    compile 'com.github.wangfeixixi:util:v1.9'
 //    compile 'com.github.wangfeixixi:utilwebx5:v1.1'
 }

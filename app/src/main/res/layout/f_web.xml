@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="WebFVH"
+            type="com.github.wangfeixixi.util.sample.WebFVH" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.github.wangfeixixi.util.view.HorizontalProgressBarWithNumber
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            app:setWebProgressBar="@{WebFVH.pbNumber}" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:initswipeRefreshLayout="@{WebFVH}"
+            app:initx5Webview="@{WebFVH.webview}">
+
+            <wangfei.utilwebx5.X5WebView
+                android:id="@+id/fffffwebview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:initLoadUrl="@{WebFVH.url}"
+                app:initWebChromeClient="@{WebFVH}"
+                app:initWebViewClient="@{WebFVH}"
+                app:isWebRefresh="@{WebFVH.isWebRefresh}" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+</layout>
