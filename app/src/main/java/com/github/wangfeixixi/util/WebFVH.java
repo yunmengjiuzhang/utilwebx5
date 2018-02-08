@@ -1,4 +1,4 @@
-package com.github.wangfeixixi.util.sample;
+package com.github.wangfeixixi.util;
 
 import android.databinding.BindingAdapter;
 import android.databinding.ObservableField;

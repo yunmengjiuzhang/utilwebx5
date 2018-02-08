@@ -31,13 +31,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FullScreenActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden" />
-        <activity
-            android:name=".FilechooserActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden" />
-        <activity
-            android:name=".Main3Activity"
+            android:name=".VideoActivity"
             android:configChanges="orientation|screenSize|keyboardHidden">
 
         </activity>

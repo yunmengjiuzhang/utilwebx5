@@ -1,4 +1,4 @@
-package com.github.wangfeixixi.util.sample;
+package com.github.wangfeixixi.util;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.wangfeixixi.util.R;
 import com.github.wangfeixixi.util.databinding.FWebBinding;
 
 import wangfei.util.fragmentation.BaseFragment;

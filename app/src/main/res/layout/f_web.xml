@@ -8,7 +8,7 @@
 
         <variable
             name="WebFVH"
-            type="com.github.wangfeixixi.util.sample.WebFVH" />
+            type="com.github.wangfeixixi.util.WebFVH" />
     </data>
 
 
