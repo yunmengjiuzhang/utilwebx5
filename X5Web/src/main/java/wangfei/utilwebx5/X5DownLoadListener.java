@@ -1,7 +1,7 @@
 package wangfei.utilwebx5;
 
-import com.tencent.smtt.sdk.DownloadListener;
-import com.tencent.smtt.utils.TbsLog;
+        import com.tencent.smtt.sdk.DownloadListener;
+        import com.tencent.smtt.utils.TbsLog;
 
 public class X5DownLoadListener implements DownloadListener {
     @Override

@@ -41,7 +41,7 @@ public class X5Utils {
     public static void enableX5FullscreenFunc(X5WebView webView) {
 
         if (webView.getX5WebViewExtension() != null) {
-            Toast.makeText(webView.getContext(), "开启X5全屏播放模式", Toast.LENGTH_LONG).show();
+//            Toast.makeText(webView.getContext(), "开启X5全屏播放模式", Toast.LENGTH_LONG).show();
             Bundle data = new Bundle();
 
             data.putBoolean("standardFullScreen", false);// true表示标准全屏，false表示X5全屏；不设置默认false，
@@ -57,7 +57,7 @@ public class X5Utils {
 
     public static void disableX5FullscreenFunc(X5WebView webView) {
         if (webView.getX5WebViewExtension() != null) {
-            Toast.makeText(webView.getContext(), "恢复webkit初始状态", Toast.LENGTH_LONG).show();
+//            Toast.makeText(webView.getContext(), "恢复webkit初始状态", Toast.LENGTH_LONG).show();
             Bundle data = new Bundle();
 
             data.putBoolean("standardFullScreen", true);// true表示标准全屏，会调起onShowCustomView()，false表示X5全屏；不设置默认false，
@@ -73,7 +73,7 @@ public class X5Utils {
 
     public static void enableLiteWndFunc(X5WebView webView) {
         if (webView.getX5WebViewExtension() != null) {
-            Toast.makeText(webView.getContext(), "开启小窗模式", Toast.LENGTH_LONG).show();
+//            Toast.makeText(webView.getContext(), "开启小窗模式", Toast.LENGTH_LONG).show();
             Bundle data = new Bundle();
 
             data.putBoolean("standardFullScreen", false);// true表示标准全屏，会调起onShowCustomView()，false表示X5全屏；不设置默认false，
@@ -89,7 +89,7 @@ public class X5Utils {
 
     public static void enablePageVideoFunc(X5WebView webView) {
         if (webView.getX5WebViewExtension() != null) {
-            Toast.makeText(webView.getContext(), "页面内全屏播放模式", Toast.LENGTH_LONG).show();
+//            Toast.makeText(webView.getContext(), "页面内全屏播放模式", Toast.LENGTH_LONG).show();
             Bundle data = new Bundle();
 
             data.putBoolean("standardFullScreen", false);// true表示标准全屏，会调起onShowCustomView()，false表示X5全屏；不设置默认false，

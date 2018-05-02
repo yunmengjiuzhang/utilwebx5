@@ -39,6 +39,7 @@ public class MainActivity extends BaseActivity {
                 Intent intent = new Intent(MainActivity.this,
                         VideoActivity.class);
                 MainActivity.this.startActivity(intent);
+//                start(WebF.newInstance("file:///android_asset/webpage/fullscreenVideo.html"));
             }
         });
 

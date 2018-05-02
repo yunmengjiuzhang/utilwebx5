@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-    <FrameLayout android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:id="@+id/frame_web_video"></FrameLayout>
-
+    android:layout_height="match_parent">
 
     <wangfei.utilwebx5.X5WebViewSample
+        android:id="@+id/activity_filechooser"
         android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/activity_filechooser"/>
+        android:layout_height="match_parent" />
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<Button-->
+            <!--android:id="@+id/testButton"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="全屏" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/testButton1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="回复原始状态" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/testButton2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="小屏" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/testButton3"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="页面内全屏" />-->
+    <!--</LinearLayout>-->
 
 </RelativeLayout>

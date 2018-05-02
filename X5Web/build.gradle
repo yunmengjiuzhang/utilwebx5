@@ -6,7 +6,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
 //        applicationId "com.example.test_webview_demo"
-        minSdkVersion 19
+        minSdkVersion 18
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
@@ -14,7 +14,7 @@ android {
         // Specifies the ABI configurations of your native
         // libraries Gradle should build and package with your APK.
         ndk {
-            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips", "x64"
         }
     }
     buildTypes {
